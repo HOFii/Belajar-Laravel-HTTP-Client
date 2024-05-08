@@ -107,7 +107,7 @@ class HttpTest extends TestCase
     }
     public function testRetry()
     {
-        $response = Http::timeout(10)->retry(5, 1000)->asJson() //Http::timeout(10)->retry(5, 1000)
+        $response = Http::timeout(1)->retry(5, 1000)->asJson() //Http::timeout(10)->retry(5, 1000)
             ->post("https://en9s3i1hxiykr.x.pipedream.net", [
                 "username" => "admin",
                 "password" => "admin"
